@@ -1,10 +1,9 @@
 
-Library Management System with Separate Portals for Librarian and Student………
+# 📚 Library Management System with Separate Portals for Librarian and Student………
      
-ABSTRACT
+## ABOUT
 This Library Management System (LMS), developed in Java with NetBeans, enhances library operations by providing efficient portals for librarians and students. Utilizing a MySQL database and JDBC, it streamlines book management and resource access, minimizing paperwork and improving user experience.
 
-Software Design 150s.
 
 
 Table of Contents
@@ -38,20 +37,26 @@ Abstract	2
 Figure 1.	10
 11. Pseudocode:	10
 
-Abstract
+## Abstract
 This report details the development and design of a Library Management System (LMS) implemented using Java in NetBeans. The system features two distinct portals—one for the librarian and another for the student—enabling efficient library management and access to library resources. The librarian can manage books, issue/return books, and view reports, while the student can search for books, view their borrowing history, and track due dates. The system utilizes a MySQL database for backend storage, with JDBC to connect the frontend interface to the database. The goal of this LMS is to simplify library operations, reduce manual paperwork, and provide a reliable system for both administrators and users.
-1. Introduction
+
+## 1. Introduction
+
 The library is regarded as the hub of research in educational institutions such as universities. The library houses the books and scientific information required by academic staff, students, and all science enthusiasts around the world( Sarma, 2016a). These libraries need to be controlled, which is called library management, meaning controlling the library’s resources and harnessing the library’s personnel to prevent any mistakes that may arise during the issuing and reissuing of books(Ali et al., 2019)
-1.1 What is a Library Management System (LMS)?
+
+### 1.1 What is a Library Management System (LMS)?
+
 A Library Management System (LMS) is a computerized system designed to manage library activities electronically. It helps librarians and users perform various library functions, such as book transactions, registration, and record keeping, more efficiently and accurately. The LMS reduces the risks associated with manual paper-based systems, such as loss of records, file damage, and time-consuming processes(Sarma, 2016b:Fengling, 2024).
 Library management systems serve both library employees and users who access library resources. They streamline operations, minimize service errors (e.g., during book borrowing, returning, and reservations), and protect library resources by preventing loss, delay, or misuse. The system also maintains an archive for all library books. In this case, the system is designed specifically for Cape Peninsula University of Technology (CPUT) students. Only CPUT-registered students are granted access to the system, using their unique student numbers to log in to their library portal along with their self-created passwords.
 An LMS usually comprises a relational database, software to interact with that database, and two graphical user interfaces: one for the administrator (librarian) and another for students(Li et al., 2012).
-1.2 The Problem Before Computerized Systems
+
+### 1.2 The Problem Before Computerized Systems
 Before implementing a computerized system, libraries often faced several issues:
 Record Loss: Physical files were prone to getting lost due to human error or environmental factors.
 Searching Difficulties: With an increasing number of records, searching for specific items became cumbersome.
 Space Constraints: As more records accumulated, the space required for physical file storage grew significantly.
-1.3 Project Objectives
+
+### 1.3 Project Objectives
 The primary objectives of this Library Management System include:
 Allow CPUT students to register and create accounts online.
 Provide individual student accounts where students can access information like borrowing history and search for books.
@@ -59,45 +64,58 @@ Maintain book details, including author information, the number of available cop
 Track book issuance, return dates, and fines for delayed returns.
 Enable administrators to add or update book records.
 Improve time efficiency, enhance accuracy, and increase reliability by implementing security measures.
-1.4 Background of the Project
+
+### 1.4 Background of the Project
 This system was developed to address the challenges associated with manual library management. The project introduces automation to simplify library operations, minimize human error, and enhance accessibility for both librarians and students.
-2. Development Process of the LMS
-2.1 System Objectives
+
+## 2. Development Process of the LMS
+### 2.1 System Objectives
+
 The system was developed to overcome current issues faced by library administrators:
 Efficient Record Keeping: The system can add and validate users and ensure accurate data storage(Ali et al., 2019).
 Reduced Human Effort: By automating tasks, less manpower is required to maintain the library, reducing operational costs.
 Quick Search Functionality: The system allows librarians to search for records using keywords, reducing the time spent on manual searches.
-2.2 Key Features
-2.2.1 User Login
+
+### 2.2 Key Features
+#### 2.2.1 User Login
+
 The LMS provides two separate login portals:
 Student Portal: Students can log in with their unique student number and password. This portal allows them to view and manage their own account.
 Librarian Portal: Librarians log in using their employee credentials. They have access to administrative functions, such as managing books and issuing or returning items.
 The system ensures that only registered users can log in by performing authentication and authorization checks. Access rights differ based on the user's role (student or librarian).
-2.2.2 Register New Books, Search for Books
+
+#### 2.2.2 Register New Books, Search for Books
 The system enables librarians to:
 Register New Books: Add new books with details like title, author, and publication date.
 Search for Books: Librarians and students can search for books by entering keywords such as the book ID, title, publication, or author name. The search function efficiently filters and displays results based on the input criteria(Li et al., 2012).
-2.3 Database Management
+
+### 2.3 Database Management
 The system uses MySQL as its database management system. MySQL is favoured for its ease of use, scalability, and support for complex queries. It allows easy maintenance and quick retrieval of data using simple SQL commands.
-3. System Components
-3.1 System Architecture
+
+## 3. System Components
+### 3.1 System Architecture
+
 The LMS follows a client-server architecture. It is built using Java for the frontend, with MySQL serving as the backend. The following are the key components of the system:
 Frontend (Client): Java Swing is used to create the graphical user interface (GUI) for both the librarian and student portals(Li et al., 2012).
 Backend (Server): A MySQL database stores information related to books, users, and transactions. Communication between the frontend and backend is established using JDBC (Java Database Connectivity)(Li et al., 2012).
 The system architecture can be represented as follows:
-4. Technologies Used
-4.1 Software Tools
+
+## 4. Technologies Used
+### 4.1 Software Tools
+
 NetBeans IDE: NetBeans was used to develop the entire system. It provides robust support for Java development, debugging, and database integration.
 Java: The core programming language used to implement the system's logic and user interface.
 MySQL: A relational database used to store and manage all data related to books, students, and transactions.
 JDBC: Java Database Connectivity (JDBC) enables communication between the Java application and the MySQL database.
-4.2 Database Structure
+
+### 4.2 Database Structure
 The MySQL database consists of the following key tables:
 Users: Stores user credentials and roles (student or librarian).
 Books: Contains information about each book, including title, author, and availability.
 IssuedBooks: Records the details of issued books, including issue date, return date, and associated fines.
-5. System Workflow
-5.1 Librarian (Administrator) Workflow
+## 5. System Workflow
+
+### 5.1 Librarian (Administrator) Workflow
 Login: The librarian logs in using a unique username and password.
 Manage Books:
 Add Book: Input new book details, including title, author, ISBN, and category.
@@ -109,7 +127,8 @@ Return Book: Record returned books, update availability, and calculate late fees
 Manage Student Accounts: View and manage student information, ensuring all records are current and valid.
 Logout: Securely log out of the system.
 
-5.2 Student Workflow
+### 5.2 Student Workflow
+
 Login: Students log in using their unique CPUT student number and self-created password.
 Search Books: Use filters such as book title, author, or subject to find available resources.
 Reserve Book: If a book is currently unavailable, students can place a reservation to be notified when it becomes available.
@@ -117,17 +136,24 @@ View Account: Check borrowing history, view due dates, and see any outstanding f
 Request Book Renewal: Submit a request to renew borrowed books, extending the return date if no reservations are pending.
 Logout: Log out to secure personal account information.
 
-6. Challenges and Solutions
-6.1 Database Connectivity
+## 6. Challenges and Solutions
+### 6.1 Database Connectivity
+
 One of the main challenges was ensuring reliable connectivity between the Java application and the MySQL database. This was addressed by implementing JDBC, which provides a secure and efficient connection.
-6.2 Authentication and Authorization
+
+### 6.2 Authentication and Authorization
+
 Implementing a robust user authentication system that separates librarian and student access was crucial. The system verifies user credentials and restricts access based on user roles.
-7. Future Enhancements
+
+## 7. Future Enhancements
+
 Future improvements to the Library Management System could include:
 Email Notifications: Automatically send reminders to students for upcoming return dates or overdue books.
 Barcode Scanning: Implementing barcode scanning for quicker book check-ins and check-outs.
 E-Book Integration: Allow students to borrow and read e-books through the system.
-8. Conclusion
+
+## 8. Conclusion
+
 The Library Management System has successfully automated various library operations, making it more efficient for librarians to manage books and for students to access library resources. The implementation of separate portals for librarians and students ensures that each user group has access to relevant features. The system is built using Java and MySQL, providing scalability, efficiency, and security.
 
 
@@ -145,7 +171,7 @@ The Library Management System has successfully automated various library operati
 
 
 
-9. List of references
+## 9. List of references
 
 Ali, B., Bushra, A. L., & Zainal, A. (2019). Developing a Library Management System for Managing the Books: A Suggested Model in the Central Library of Cihan University-Erbil. International Journal of Advanced Science and Technology, 28(13), 559–578. https://www.researchgate.net/publication/337905868
 Analysis and Research on Library Management Technology Based on the Integration of Virtual Reality and Management. (2024).
@@ -163,7 +189,7 @@ Sarma, G. K. (2016b). OPAC module in open source library management software: A 
 
 
 
-10. Appendix
+## 10. Appendix
 Figure 1.
 
 
@@ -177,7 +203,7 @@ Figure 1.
 
 
 
-11. Pseudocode:
+## 11. Pseudocode:
 IssueBook
 CLASS Issue_Book
     VARIABLES
